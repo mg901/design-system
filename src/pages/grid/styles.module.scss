@@ -1,0 +1,14 @@
+.demo {
+  --gutter-x: 16px;
+  width: 70%;
+  padding-right: calc(var(--gutter-x) * .5);
+  padding-left: calc(var(--gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.demo [class|="col"] {
+  padding: 16px;
+  background-color: lightblue;
+  border: 1px solid #8686fa;
+}

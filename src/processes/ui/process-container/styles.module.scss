@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  width: calc(var(--container-width) + 35%);
+  margin-left: auto;
+  margin-right: auto;
+}

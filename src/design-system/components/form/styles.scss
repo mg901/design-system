@@ -1,0 +1,49 @@
+.form {
+  --control-margin-bottom: 24px;
+  --form-text-size: var(--text-variant-caption);
+  position: relative;
+
+  & fieldset {
+    border: var(--border-width-sm) solid transparent;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+
+    &:not(:last-of-type) {
+      margin-bottom: calc(var(--control-margin-bottom) + 16px);
+    }
+  }
+
+  & .text.variant-h4, & h2.text {
+    margin-bottom: calc(var(--control-margin-bottom) - 8px);
+  }
+
+  & legend {
+    display: inline-block;
+  }
+
+  & .form-group:not(:last-of-type,.col),
+  & .row:not(:last-of-type) {
+    margin-bottom: var(--control-margin-bottom);
+  }
+
+  & .form-group + .btn[type="submit"],
+  & fieldset + .btn[type="submit"],
+  & .row + .btn[type="submit"] {
+    margin-top: calc(var(--control-margin-bottom) + 8px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+@import '../variables';
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .gap-#{$i} {
+        gap: #{$i}px;
+    } 
+  }
+}

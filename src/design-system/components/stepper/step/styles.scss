@@ -1,0 +1,37 @@
+.step {
+  --color: var(--tex-color-secondary);
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 16px 8px;
+  color: var(--color);
+
+  &[data-active="true"] {
+    --color: var(--text-color-primary);
+  }
+
+  .connector {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    flex: 1;
+    height: 1px;
+    background: #bdbdbd;
+  }
+  
+    
+  &.first .connector {
+    right: 0;
+    left: 50%;
+  }
+  
+  &.last .connector {
+    right: 50%;
+  }
+}
+
+

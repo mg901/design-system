@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+@import '../variables';
+@import '../../../theme/breakpoints/variables';
+@import '../../../theme/breakpoints/mixins';
+
+
+
+@mixin make-col($size: false, $columns: $grid-columns) {
+  @if $size {
+    flex: 0 0 auto;
+    width: percentage(math.div($size, $columns));
+
+  } @else {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: math.div($size, $columns);
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint);
+
+  @include up($breakpoint) {
+    // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+    .col#{$infix} {
+      flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+    }
+
+    .col#{$infix}-auto {
+      @include make-col-auto();
+    }
+
+    @if $grid-columns > 0 {
+      @for $i from 1 through $grid-columns {
+        .col#{$infix}-#{$i} {
+          @include make-col($i);
+        }
+      }
+
+      // `$grid-columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($grid-columns - 1) {
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+          .offset#{$infix}-#{$i} {
+            @include make-col-offset($i);
+          }
+        }
+      }
+    }
+  }
+}

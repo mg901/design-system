@@ -1,0 +1,19 @@
+
+.feedback {
+  position: relative;
+  text-align: left;
+  margin-top: 8px;
+  margin-left: 16px;
+  font-size: var(--form-text-size);
+
+  &-valid {
+    color: var(--success);
+  }
+
+  &-invalid {
+    color: var(--danger);
+  }
+}
+
+
+

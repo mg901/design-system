@@ -1,0 +1,51 @@
+@import "../variables";
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .pt-#{$i} {
+        padding-top: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .pr-#{$i} {
+        padding-right: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .pb-#{$i} {
+        padding-bottom: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .pl-#{$i} {
+        padding-left: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .px-#{$i} {
+        padding-left: #{$i}px !important;
+        padding-right: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .py-#{$i} {
+      padding-top: #{$i}px !important;
+      padding-bottom: #{$i}px !important;
+    } 
+  }
+}

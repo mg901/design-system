@@ -1,0 +1,15 @@
+@for $i from -1 through 6 {
+  @if $i == -1 {
+    .order-first {
+      order: $i !important;
+    }
+  } @else if $i == 6 {
+    .order-last {
+      order: $i !important;
+    }
+  } @else {
+    .order-#{$i} {
+      order: $i !important;
+    }
+  }
+}

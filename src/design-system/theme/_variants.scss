@@ -1,0 +1,39 @@
+@import './colors';
+
+// Variants
+:root {
+  // primary
+  --primary: var(--green-400);
+  --primary-dark: var(--green-300);
+  --primary-darkest: var(--green-200);
+  --primary-contrast: var(--neutral-900);
+
+  // success
+  --success: var(--green-400);
+  --success-dark: var(--green-300);
+  --success-darkest: var(--green-200);
+  --success-contrast: var(--neutral-900);
+
+  // secondary
+  --secondary: var(--green-900);
+  --secondary-dark: var(--green-800);
+  --secondary-darkest: var(--green-700);
+  --secondary-contrast: var(--neutral-900);
+
+  // danger
+  --danger: var(--red-500);
+  --danger-dark: var(--red-400);
+  --danger-darkest: var(--red-300);
+  --danger-contrast: var(--neutral-900);
+
+  // warning
+  --warning: var(--yellow-500);
+  --warning-dark: var(--yellow-400);
+  --warning-darkest: var(--yellow-300);
+  --warning-contrast: var(--neutral-200);
+
+  // info
+  --info: var(--blue-500);
+  --info-lightest: var(--blue-200);
+  --info-contrast: var(--neutral-900);
+}

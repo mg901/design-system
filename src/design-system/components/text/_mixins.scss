@@ -1,0 +1,68 @@
+$text-variants: hl1, hl2, h1, h2, h3, h4, h5, h6, body1, body2, caption;
+
+@mixin text-variants {
+  @each $variant in $text-variants {
+    &.variant-#{$variant} {
+      font-size: var(--text-variant-#{$variant});
+    }
+  }
+};
+
+
+$text-weights: medium, regular;
+
+@mixin text-weights {
+  @each $weight in $text-weights {
+    &.weight-#{$weight} {
+      font-weight: var(--font-weight-#{$weight});
+    }
+  }
+}
+
+
+$text-aligns: right, center, left;
+
+@mixin text-aligns {
+  @each $item in $text-aligns {
+    &.align-#{$item} {
+      text-align: $item;
+    }
+  }
+}
+
+
+$vertical-aligns: baseline, top, middle,bottom, text-top, text-bottom;
+
+@mixin vertical-aligns {
+  &.verical-align {
+    @each $item in $vertical-aligns {
+      &-#{$item} {
+        vertical-align: $item;
+      }
+    }
+  }
+}
+
+$text-colors: primary, secondary, success, danger, warning, info, muted;
+
+@mixin text-colors {
+  @each $color in $text-colors {
+    @if $color == primary {
+      &.color-#{primary} {
+        color: var(--text-color-#{primary});
+      }
+    } @else if $color == secondary {
+      &.color-#{secondary} {
+        color: var(--text-color-#{secondary});
+      }
+    } @else if $color == muted {
+      &.color-#{muted} {
+        color: var(--text-color-#{muted});
+      }  
+    } @else {
+      &.color-#{$color} {
+        color: var(--#{$color});
+      }  
+    }
+  }
+}

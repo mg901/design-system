@@ -1,0 +1,29 @@
+.form-control {
+  border: var(--border-width-sm) solid var(--neutral-500);
+}
+
+:where(
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"], 
+  textarea
+).form-control {
+  display: block;
+  width: 100%;
+  padding: 16px; 
+  border-radius: var(--border-radius-sm);
+  text-align: left;
+
+  &:hover {
+    border-color: var(--neutral-300);
+  }
+
+  &-invalid {
+    border-color: var(--danger)
+  }
+
+  &:focus {
+    border-color: var(--neutral-200);
+  }
+}

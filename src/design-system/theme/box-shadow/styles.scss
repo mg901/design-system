@@ -1,0 +1,32 @@
+:root {
+  --box-shadow-sm: 0px 3px 13px
+  rgba(205, 205, 205, 0.5);
+  --box-shadow-md: 0px 2px 18px
+  rgba(11, 20, 26, 0.05);
+  --box-shadow-lg: 0px 4px 25px
+  rgba(0, 0, 0, 0.07);
+  --box-shadow-xl: 0px 3px 40px rgba(27, 25, 74, 0.1);
+  --box-shadow-xxl: 0px 4px 75px rgba(119, 119, 119, 0.15);
+}
+
+.box-shadow-sm {
+  box-shadow: var(--box-shadow-sm);
+}
+
+.box-shadow-md {
+  box-shadow: var(--box-shadow-md);
+}
+
+.box-shadow-lg {
+  box-shadow: var(--box-shadow-lg);
+}
+
+.box-shadow-xl {
+  box-shadow: var(--box-shadow-xl);
+}
+
+.box-shadow-xxl {
+  box-shadow: var(--box-shadow-xxl);
+}
+
+

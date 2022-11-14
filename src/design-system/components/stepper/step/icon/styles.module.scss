@@ -1,0 +1,27 @@
+.icon {
+  position: absolute;
+  box-sizing: content-box;
+  --size: 24px;
+  --bg-color: var(--neutral-300);
+  display: inline-flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: var(--size);
+  height: var(--size);
+  color: var(--white);
+  font-size: var(--text-variant-caption);
+  border-radius: var(--border-radius-circle);
+  background-color: var(--bg-color);
+  border: var(--border-width-md) solid var(--white);
+  box-shadow: 0 0 0 var(--border-width-md) var(--bg-color), 10px 0 0 6px var(--white), -10px 0 0 6px var(--white);
+  z-index: 1;
+
+  &[data-completed="true"] {
+    --bg-color: var(--primary);
+  }
+
+  &[data-active="true"] {
+    --bg-color: var(--neutral-200);
+  }
+}

@@ -1,0 +1,37 @@
+// Typography
+// font sizes
+
+:root {
+  // variants
+  // https://www.modularscale.com/?16&px&1.10810
+  --text-variant-hl1: 40px;
+  --text-variant-hl2: 36px;
+  --text-variant-h1: 28px;
+  --text-variant-h2: 24px;
+  --text-variant-h3: 22px;
+  --text-variant-h4: 20px;
+  --text-variant-h5: 19px;
+  --text-variant-h6: 18px;
+  --text-variant-subtitle: 17px;
+  --text-variant-body1: 16px;
+  --text-variant-body2: 14px;
+  --text-variant-caption: 13px;
+
+  // body
+  --font-family-base: 'Ubuntu', sans-serif;
+  --font-size-base: var(--text-variant-body2);
+  --line-height-base: 1.5;
+  
+
+  // colors
+  --text-color-primary: var(--neutral-200);
+  --text-color-secondary: var(--neutral-300);
+  --text-color-muted: rebeccapurple;
+
+  // weights
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+}
+
+
+

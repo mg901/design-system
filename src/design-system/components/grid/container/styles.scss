@@ -1,0 +1,39 @@
+@use  '../../../theme/breakpoints/variables' as *;
+@use  '../../../theme/breakpoints/mixins' as *;
+@use '../variables' as *;
+
+:root {
+  --container-width: 100%;
+
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    
+    @include up($breakpoint) {
+      & {
+        --container-width: #{$container-max-width};
+      }
+    }
+   }
+}
+
+
+
+@mixin make-container() {
+  --gutter-x: #{$container-padding-x};
+  padding-right: calc(var(--gutter-x) * .5);
+  padding-left: calc(var(--gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+ .container {
+  @include make-container();
+  width: var(--container-width);
+ }
+
+ .container-fluid {
+  @include make-container();
+  width: 100%;
+ }
+
+

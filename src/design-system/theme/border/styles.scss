@@ -1,0 +1,39 @@
+:root {
+  // why so many?
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+  --border-radius-xxl: 16px;
+  --border-radius-circle: 50%;
+
+  // and here?
+  --border-width-sm: 1px; 
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+}
+
+.border-radius-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.border-radius-md {
+  border-radius: var(--border-radius-md);
+}
+
+.border-radius-lg {
+  border-radius: var(--border-radius-lg);
+}
+
+.border-radius-xl {
+  border-radius: var(--border-radius-xl);
+}
+
+.border-radius-xxl {
+  border-radius: var(--border-radius-xxl);
+}
+
+.border-radius-circle  {
+  border-radius: var(--border-radius-circle);
+}
+

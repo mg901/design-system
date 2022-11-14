@@ -1,0 +1,14 @@
+.stack {
+  display: flex;
+  align-self: stretch;
+
+  &.horizontal {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &.vertical {
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+}

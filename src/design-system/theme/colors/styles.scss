@@ -1,0 +1,25 @@
+.bg-color-white {
+  background-color: var(--white);
+}
+
+.bg-color-black {
+  background-color: var(--black);
+}
+
+$shades: 200, 300, 400, 500, 600, 700, 800, 900;
+$colors: (
+  neutral: $shades,
+  green: $shades,
+  red: $shades,
+  orange: $shades,
+  yellow: $shades,
+  blue: $shades,
+);
+
+@each $color, $shades in $colors {
+  @each $shade in $shades {
+    .bg-color-#{$color}-#{$shade} {
+      background-color: var(--#{$color}-#{$shade});
+    }
+  }
+}

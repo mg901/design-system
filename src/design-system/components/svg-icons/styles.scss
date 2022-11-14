@@ -1,0 +1,24 @@
+$svg-icon-variants: success, danger, warning, info, white;
+
+.svg-icon {
+  --color: var(--neutral-200);
+  --size: 16px;
+  fill: var(--color);
+  width: var(--size);
+  height: var(--size);
+  
+  &.md {
+    --size: 20px;
+  }
+  
+  &.lg {
+    --size: 24px;
+  }
+
+  @each $variant in $svg-icon-variants {
+    &.#{$variant} {
+      --color: var(--#{$variant});
+    }
+  }
+}
+

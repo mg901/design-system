@@ -1,0 +1,7 @@
+$align-selfs: auto, flex-start, flex-end, center, baseline, stretch;
+
+@each $item in $align-selfs {
+  .align-self-#{$item} {
+    align-self: $item !important;
+  }
+}

@@ -1,0 +1,16 @@
+.btn-circle {
+  --size: 48px;
+  --bg-color: var(--neutral-900);
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--border-radius-circle);
+  border-width: var(--border-width-md);
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow-lg);
+  border-color: var(--neutral-900);
+
+  &:hover {
+    --bg-color: var(--neutral-800);
+  }
+}

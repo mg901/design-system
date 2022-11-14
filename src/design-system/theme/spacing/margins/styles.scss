@@ -1,0 +1,77 @@
+@import "../variables";
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .mt-#{$i} {
+        margin-top: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .mr-#{$i} {
+        margin-right: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .mb-#{$i} {
+        margin-bottom: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .ml-#{$i} {
+        margin-left: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .mx-#{$i} {
+        margin-left: #{$i}px !important;
+        margin-right: #{$i}px !important;
+    } 
+  }
+}
+
+@for $i from $min-spacing through $max-spacing {
+  @if $i % $base-spacing == $remainder {
+    .my-#{$i} {
+        margin-top: #{$i}px !important;
+        margin-bottom: #{$i}px !important;
+    } 
+  }
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}

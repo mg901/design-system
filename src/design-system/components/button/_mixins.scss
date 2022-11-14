@@ -1,0 +1,57 @@
+@mixin button-variants {
+  &.secondary {
+    --bg-color: var(--primary-contrast);
+    --color: var(--primary-dark);
+    --border-color: var(--primary);
+    
+
+    &:hover:not(:disabled) {
+      --bg-color: var(--neutral-700);
+    }
+
+    &:active:not(:disabled) {
+      --bg-color: var(--neutral-500);
+    }
+  }
+
+  &.danger {
+    --bg-color: var(--danger); 
+    --color: var(--danger-contrast);  
+    
+    &:hover:not(:disabled) {
+      --bg-color: var(--danger-dark); 
+    }
+
+    &:active:not(:disabled) {
+      --bg-color: var(--danger-darkest); 
+    }
+  }
+
+  &.warning {
+    --bg-color: var(--warning); 
+    --color: var(--warning-contrast);
+
+    &:hover:not(:disabled) {
+      --bg-color: var(--warning-dark);
+    }
+
+    &:active:not(:disabled) {
+      --bg-color: var(--warning-darkest); 
+    }
+  }
+
+  &.neutral {
+    --bg-color: var(--neutral-900); 
+    --color: var(--neutral-900-contrast);
+    --border-color: var(--neutral-400);
+
+
+    &:hover:not(:disabled) {
+      --bg-color: var(--neutral-600);
+    }
+
+    &:active:not(:disabled) {
+      --bg-color: var(--neutral-500);
+    }
+  }
+}

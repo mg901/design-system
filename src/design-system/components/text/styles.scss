@@ -1,0 +1,48 @@
+@import "./mixins";
+
+h1, h2, h3 ,h4 ,h5 , h6 {
+  font-weight: var(--font-weight-medium) !important;
+  margin-top: 0;
+}
+
+$headings: h1, h2, h3, h4, h5 ,h6;
+
+@each $heading in $headings {
+  #{$heading}.text {
+    font-size: var(--text-variant-#{$heading});
+  }
+}
+
+$text-variants: hl1, hl2, h1, h2, h3, h4, h5, h6, body2, body1, caption;
+
+span.text,
+strong.text,
+small.text,
+a.text {
+  display: inline-block;
+}
+
+p.text {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: var(--line-height-base);
+
+  &[class^="h"], &[class*="variant-h"] {
+    font-weight: var(--font-weight-medium);
+    margin-top: 0;
+  }
+
+  @include text-variants;
+  @include text-weights;
+  @include text-aligns;
+  @include vertical-aligns;
+  @include text-colors;
+}
+
+

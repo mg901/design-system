@@ -1,0 +1,7 @@
+$align-items: flex-start, flex-end, center, baseline, stretch;
+
+@each $item in $align-items {
+  .align-items-#{$item} {
+    align-items: $item !important;
+  }
+}

@@ -1,0 +1,5 @@
+.section:not(:last-of-type) {
+  border-bottom: 1px solid var(--neutral-500);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}

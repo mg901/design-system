@@ -1,0 +1,7 @@
+$directions: row, column, row-reverse, column-reverse;
+
+@each $item in $directions {
+  .flex-#{$item} {
+    flex-direction: $item !important;
+  }
+}

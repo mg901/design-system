@@ -1,0 +1,7 @@
+$wraps: wrap, nowrap, wrap-reverse;
+
+@each $item in $wraps {
+  .flex-#{$item} {
+    flex-wrap: $item !important;
+  }
+}

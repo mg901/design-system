@@ -1,0 +1,16 @@
+.label {
+  --color: var(--text-color-secondary);
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--color);
+  font-weight: var(--font-weight-medium);
+
+  &[data-completed="true"] {
+    --color: var(--text-color-primary);
+  }
+
+
+  &[data-active="true"] {
+    --color: var(--text-color-primary);
+  }
+}

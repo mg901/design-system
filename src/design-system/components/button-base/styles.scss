@@ -1,0 +1,26 @@
+.btn-base {
+  --border-color: transparent;
+  --padding: 0;
+  --cursor: pointer;
+  display: inline-flex;
+  flex: none;
+  padding: var(--padding);
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border-width: var(--border-width-md);
+  border-style: solid;
+  border-color: var(--border-color);
+  cursor: var(--cursor);
+  transition: color .15s ease-in-out, 
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out, 
+    box-shadow .15s ease-in-out;
+  
+}
+
+
+
+

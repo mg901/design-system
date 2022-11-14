@@ -1,0 +1,35 @@
+@use './mixins' as *;
+
+.btn {
+  --bg-color: var(--primary);
+  --color: var(--primary-contrast);
+  --border-color: transparent;
+  position: relative;
+  min-width: 140px;
+  --padding: 13.5px 24px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: var(--color); 
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-color); 
+
+
+  &:hover:not(:disabled) {
+    --bg-color: var(--primary-dark);
+  }
+
+  &:active:not(:disabled) {
+    --bg-color: var(--primary-darkest);
+  }
+
+  &:disabled {
+    --bg-color: var(--neutral-100) !important; 
+    --color: var(--neutral-400) !important;
+    --border-color: var(--neutral-500) !important;
+    --cursor: not-allowed;
+  }
+
+   @include button-variants()
+}
+
+
